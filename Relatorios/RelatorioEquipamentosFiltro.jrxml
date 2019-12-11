@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioEquipamentos" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="14df6d50-7936-4fae-ada7-ca6b76d5cb04">
+	<property name="ireport.zoom" value="0.7513148009015777"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[select * from equipamento]]>
+	</queryString>
+	<field name="idequipamento" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="marca" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="modelo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="peso" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="danificado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="575" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-20" y="0" width="20" height="475" backcolor="#000000" uuid="b994ea8a-bad3-46ed-9610-105aa5d2969e"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="475" width="105" height="100" backcolor="#666666" uuid="1791db52-dc94-490b-975e-fd309e159ad2"/>
+				<textField>
+					<reportElement style="Column header" x="0" y="0" width="104" height="73" forecolor="#000000" uuid="ffe31ecd-5275-46d0-a494-fa890013c344"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="58" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="0" y="77" width="104" height="20" forecolor="#000000" uuid="4bef05df-6ea7-4b02-af4c-60ae15045cb5"/>
+					<box leftPadding="4" rightPadding="4"/>
+					<textElement textAlignment="Center">
+						<font size="16" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement mode="Transparent" x="42" y="73" width="20" height="1" backcolor="#FFFFFF" uuid="435f2e0b-eef2-484e-b96b-785688116bf5"/>
+				</line>
+			</frame>
+		</band>
+	</background>
+	<title>
+		<band height="162" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="802" height="67" uuid="6657c917-5c3b-4218-99cd-4244fb1fa275"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="54" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Fabrica de Monstros]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="218" height="140" uuid="4dbc1dae-79a5-4dce-9571-f95558326461"/>
+				<imageExpression><![CDATA["C:\\Users\\Kylsen.Zero\\Documents\\NetBeans\\ProjetoAcademia\\src\\View\\logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="SubTitle" x="0" y="67" width="802" height="37" uuid="71c487f6-c887-4a3c-b3b6-bdd63abadadf"/>
+				<textElement textAlignment="Center">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Relatorio de Equipamentos Cadastrados]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="802" height="25" backcolor="#666666" uuid="50404413-f40d-452b-bf31-6dcc27d1d6ad"/>
+				<staticText>
+					<reportElement style="Column header" x="22" y="0" width="91" height="25" uuid="be8421bb-6ebb-49c2-93c8-bb6f63206477"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Código]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="113" y="0" width="154" height="25" uuid="97453ff0-5506-4793-985e-8142d157ab51"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Marca]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="267" y="0" width="163" height="25" uuid="82231201-d1c4-40e1-ac32-3ed3c5d0ddcb"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Modelo]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="430" y="0" width="117" height="25" uuid="e7bb3c44-2a94-42d8-a829-0d5efa265798"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Peso]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="547" y="0" width="117" height="25" uuid="5aca624e-a8e8-438b-9742-bb8d3eb716ca"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Tipo]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="664" y="0" width="122" height="25" uuid="d21fe43e-8a3e-4952-ae4f-eddea747114e"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Denificado]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="802" height="1" uuid="951fbe1a-d466-4af1-970d-ebfa1a48ce94"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<frame>
+				<reportElement x="0" y="0" width="802" height="21" uuid="b7fee7cf-196f-4919-8d0f-c27e606ac344"/>
+				<textField>
+					<reportElement style="Detail" x="22" y="0" width="91" height="21" uuid="c94af8e5-b618-4284-bf35-564b0631dff5"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{idequipamento}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="113" y="0" width="154" height="21" uuid="a9dbf09a-7d07-42c6-967b-01fb866b36cd"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{marca}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="430" y="0" width="117" height="21" uuid="9f5c7148-ce3f-4101-90c0-28d264f257f8"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{peso}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="547" y="0" width="117" height="21" uuid="0a64eb24-17d3-4451-996e-7e12145ff05a"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{tipo}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="664" y="0" width="122" height="21" uuid="987b6c8e-54a6-4101-9235-a2b90e213ebd"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{danificado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="267" y="0" width="163" height="21" uuid="e010cb78-6aa4-4e51-8f86-e70dd0734d28"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{modelo}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="29" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="594" y="0" width="177" height="29" forecolor="#000000" uuid="35f9f624-4ea6-4ba2-8f07-dd27db6df9c8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="67" y="2" width="267" height="27" uuid="bd492999-a4e2-41e3-ab27-eec48f8f8658"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Fabrica de Monstros]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

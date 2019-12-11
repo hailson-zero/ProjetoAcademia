@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioInstrutorFiltro" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="c4226c7e-39ab-49fd-9ebb-988353341611">
+	<property name="ireport.zoom" value="0.9090909090909091"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="parametrocidade" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from instrutor where cidade = $P{parametrocidade}]]>
+	</queryString>
+	<field name="idinstrutor" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="salario" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numero" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cidade" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="575" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-20" y="0" width="20" height="475" backcolor="#000000" uuid="2c3c9604-af27-41d0-9f79-35a2738e7963"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="475" width="105" height="100" backcolor="#666666" uuid="37ded8d0-7011-457c-89f8-ad08ee8f5df1"/>
+				<textField>
+					<reportElement style="Column header" x="0" y="0" width="104" height="73" forecolor="#000000" uuid="04cb1305-d0d8-4603-90bf-e5f9a615ebc3"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="58" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="0" y="77" width="104" height="20" forecolor="#000000" uuid="60671160-3ed4-436c-bda7-6a9f00f80f25"/>
+					<box leftPadding="4" rightPadding="4"/>
+					<textElement textAlignment="Center">
+						<font size="16" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement mode="Transparent" x="42" y="73" width="20" height="1" backcolor="#FFFFFF" uuid="7cced058-1ff2-4d67-9829-dacc0ed5287c"/>
+				</line>
+			</frame>
+		</band>
+	</background>
+	<title>
+		<band height="143" splitType="Stretch">
+			<staticText>
+				<reportElement style="SubTitle" x="42" y="67" width="802" height="37" uuid="deb1aee1-99e1-42c1-851c-3bfb71031f7a"/>
+				<textElement textAlignment="Center">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Relatorio de Instrutores Cadastrados]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="42" y="0" width="802" height="67" uuid="fe549c78-6c8b-4268-ad78-31f8aa636429"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="54" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Fabrica de Monstros]]></text>
+			</staticText>
+			<image>
+				<reportElement x="20" y="0" width="218" height="140" uuid="ccd6e60f-377e-4b64-acfa-f754fcc033c5"/>
+				<imageExpression><![CDATA["C:\\Users\\Kylsen.Zero\\Documents\\NetBeans\\ProjetoAcademia\\src\\View\\logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="802" height="25" backcolor="#666666" uuid="5810fb1f-8ca6-42eb-b397-e0bd690db888"/>
+				<staticText>
+					<reportElement style="Column header" x="22" y="0" width="75" height="25" uuid="c7a03ed3-ec00-44e5-9468-698933e864cf"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Código]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="97" y="0" width="220" height="25" uuid="28dbace5-23aa-4457-9ebc-5fed6220dcca"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Nome]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="317" y="0" width="117" height="25" uuid="b956eb26-be1e-4d1c-9cdd-8264e658cc85"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Salário]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="434" y="0" width="117" height="25" uuid="b91ae1f4-623e-4c29-9cea-b6d3ae072f2c"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Número]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="551" y="0" width="117" height="25" uuid="92f407c8-e64b-498f-ae14-a512030c1bb6"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Cidade]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="668" y="0" width="117" height="25" uuid="1b14c6c0-090f-4591-b1f2-2f1efe81fe73"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Estado]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="802" height="1" uuid="f06111af-4839-4424-a03c-f99ec9d29fdb"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<frame>
+				<reportElement x="0" y="0" width="802" height="21" uuid="d19d7fd2-109c-41ab-93c6-94e3dcdd10b1"/>
+				<textField>
+					<reportElement style="Detail" x="22" y="0" width="75" height="21" uuid="5023c91b-cb42-4082-8ca1-1e0476e41081"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{idinstrutor}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="97" y="0" width="220" height="21" uuid="77b10d72-e996-4ee9-988e-8625abb28c83"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="317" y="0" width="117" height="21" uuid="d6b55af6-5105-4aab-956b-e1eebe07695d"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{salario}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="434" y="0" width="117" height="21" uuid="51c7224c-36cc-4e26-bb35-8c18d634827e"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{numero}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="551" y="0" width="117" height="21" uuid="5f272fe3-9678-4cf1-bba6-49eb6a1cd311"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{cidade}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="668" y="0" width="117" height="21" uuid="9fd4faa4-ddf9-473a-ad10-b07df87f3471"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{estado}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="27" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="608" y="0" width="194" height="27" forecolor="#000000" uuid="5c021d7e-3f58-407c-b081-7d4ef46d8aef"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="115" y="0" width="267" height="27" uuid="aa75a09a-1a3b-4f90-a7a6-a296987c0972"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Fabrica de Monstros]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

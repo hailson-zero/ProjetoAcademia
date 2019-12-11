@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioAluno" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="0eeb8491-d0e3-48bd-b8d6-7158f4d6ee48">
+	<property name="ireport.zoom" value="0.8264462809917359"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[select * from aluno]]>
+	</queryString>
+	<field name="idaluno" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numero" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cidade" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horario" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="575" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-20" y="0" width="20" height="475" backcolor="#000000" uuid="d04e6ddd-14f1-408c-90bd-e28cdc3999bd"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="475" width="105" height="100" backcolor="#666666" uuid="0be8b6a8-1089-4fa3-aaaf-f68ba12673c1"/>
+				<textField>
+					<reportElement style="Column header" x="0" y="0" width="104" height="73" forecolor="#000000" uuid="1cc9eea3-59e8-43db-97b5-3c34af39a9f1"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="58" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="0" y="77" width="104" height="20" forecolor="#000000" uuid="7927c455-1463-423e-b656-dd1b6fc0502b"/>
+					<box leftPadding="4" rightPadding="4"/>
+					<textElement textAlignment="Center">
+						<font size="16" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement mode="Transparent" x="42" y="73" width="20" height="1" backcolor="#FFFFFF" uuid="262ffe61-dd72-4cad-b9cc-0fade1d83d17"/>
+				</line>
+			</frame>
+		</band>
+	</background>
+	<title>
+		<band height="144" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="802" height="67" uuid="292f9455-f114-4e37-a08c-068965b9374c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="54" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Fabrica de Monstros]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="218" height="140" uuid="761e85a1-cd58-456b-9d8e-25dbec697d09"/>
+				<imageExpression><![CDATA["C:\\Users\\Kylsen.Zero\\Documents\\NetBeans\\ProjetoAcademia\\src\\View\\logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="SubTitle" x="114" y="67" width="568" height="37" uuid="e98bfc47-541e-4013-8f97-f6e091749d6e"/>
+				<textElement textAlignment="Center">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Relatorio de Alunos Cadastrados]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="802" height="27" backcolor="#666666" uuid="af049bcc-7f13-4638-ac75-a135d423fc4a"/>
+				<staticText>
+					<reportElement style="Column header" x="85" y="0" width="236" height="27" uuid="73a3fe0c-d80a-4c55-98ca-c273fb4c11bd"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Nome]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="321" y="0" width="117" height="27" uuid="ab2d076b-2c2f-44ad-8dbd-cdf60f1c7c8e"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Número]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="671" y="0" width="117" height="27" uuid="ef8a6d8e-df40-427c-a8de-3b2bcebebbb1"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Cidade]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="438" y="0" width="117" height="27" uuid="c5cd935d-041b-4d30-bc6c-180a89d16f9e"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Horário]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="11" y="0" width="73" height="27" uuid="76ddf848-758c-41fb-aa59-b34833008a65"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Código	]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="555" y="0" width="116" height="27" uuid="52af0abd-67bb-41b7-b21a-2ce35d9c7a87"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Estado]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="802" height="25" uuid="55e73792-957f-4975-8c82-686b6b9b2b4e"/>
+				<textField>
+					<reportElement style="Detail" x="320" y="0" width="117" height="25" uuid="899b8fc4-db1e-40f8-9ac7-7fe2ca5d1e76"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{numero}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="554" y="0" width="116" height="25" uuid="b2d14d9c-14f9-4dd1-941e-594dbc681dcc"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{estado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="85" y="0" width="236" height="25" uuid="33ec7272-00d1-42c2-98ee-d761bcb450ff"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="11" y="0" width="74" height="25" uuid="a1d34c28-36ca-4298-8d9b-6fd2396b34ec"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{idaluno}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="438" y="0" width="117" height="25" uuid="1d064a86-e67c-4840-8eac-2661a894df14"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{horario}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="671" y="0" width="117" height="25" uuid="89cdc4c0-4a5e-4269-972a-f6d15d6b7be1"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{cidade}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="802" height="1" uuid="9699c3cb-e62c-4909-842b-456a0593cf07"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="30" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="590" y="0" width="211" height="28" forecolor="#000000" uuid="854ea5f0-3791-4a10-a758-cb57dd8432b2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="125" y="0" width="171" height="28" uuid="5b1cd841-c4c4-4ae6-9fed-bbc409fa6a99"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Fabrica de Monstros]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
